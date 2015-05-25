@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Nevergreen post-install running..."
+echo "Nevergreen post-install done!"

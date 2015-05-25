@@ -1,0 +1,56 @@
+plugins {
+    id "nebula.os-package" version "2.2.6"
+    id "de.undercouch.download" version "1.2"
+}
+
+apply plugin: 'os-package'
+apply plugin: 'de.undercouch.download'
+
+ext {
+    nevergreenVersion = nevergreenVersion ?: '0.5.0'
+    jarName = 'nevergreen-standalone.jar'
+}
+
+task downloadNevergreen << {
+println test
+    download {
+        src "https://github.com/build-canaries/nevergreen/releases/download/v${nevergreenVersion}/${jarName}"
+        dest "build/libs/${jarName}"
+        overwrite false
+    }
+}
+
+ospackage {
+    packageName = 'nevergreen'
+    version = nevergreenVersion
+    release = 1
+    arch = NOARCH
+    os = LINUX
+    summary = 'Nevergreen Build Monitor'
+    description = ' Nevergreen Build Monitor'
+    vendor = 'Build Canaries'
+    url = 'http://nevergreen.io/'
+    user = 'root'
+
+    postInstall = file('src/deploy/resources/rpm/postinst')
+    preUninstall = file('src/deploy/resources/rpm/prerm')
+
+    into '/opt/nevergreen'
+
+    from("build/libs") {
+        include jarName
+    }
+
+    from('src/deploy/resources/upstart') {
+        fileType = CONFIG
+        into '/'
+    }
+
+    from('src/deploy/resources/systemd') {
+        fileType = CONFIG
+        into '/'
+    }
+}
+
+buildRpm.dependsOn downloadNevergreen
+buildDeb.dependsOn downloadNevergreen

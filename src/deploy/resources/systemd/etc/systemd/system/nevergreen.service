@@ -1,0 +1,13 @@
+[Unit]
+Description=Nevergreen
+After=local-fs.target network.target
+
+[Service]
+User=root
+EnvironmentFile=/opt/nevergreen/environment
+WorkingDirectory=/opt/nevergreen
+ExecStart=/usr/bin/java -jar -server $JVM_OPTIONS nevergreen-standalone.jar
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
