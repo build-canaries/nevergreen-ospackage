@@ -11,11 +11,15 @@ For more info visit https://github.com/build-canaries/nevergreen
 
 ## How to use this repo
 
-This repo uses the [Gradle Linux Packaging Plugin](https://github.com/nebula-plugins/gradle-ospackage-plugin) to build a deployable Nevergreen package to make running your own instance easier.
+This repo uses the [Gradle Linux Packaging Plugin](https://github.com/nebula-plugins/gradle-ospackage-plugin) to build a deployable Nevergreen package to make running your own instance on a Linux distro easier.
 
-This repo contains some sensible defaults so may be used without changes. Some simple settings can be overridden by creating a gradle.properties file, see the [Gradle docs](https://docs.gradle.org/current/userguide/build_environment.html) for more details about placing this file in the correct place. 
+This repo contains some sensible defaults so may be used without changes. Some simple settings can be overridden by creating a `gradle.properties` file, see the [Gradle docs](https://docs.gradle.org/current/userguide/build_environment.html) for more details about placing this file in the correct place. 
 
 Alternatively if you need to make more involved changes you can fork this repo and just use it as a base.
+
+### Standalone Jar
+
+The jar to package is downloaded automatically and placed into `build/libs` unless a file named `nevergreen-standalone.jar` already exists. This allows you to manually download or build your own jar locally.
 
 ### Overridable Properties
 
