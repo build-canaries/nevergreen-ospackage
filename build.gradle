@@ -7,7 +7,7 @@ apply plugin: 'os-package'
 apply plugin: 'de.undercouch.download'
 
 ext {
-    nevergreenVersion = hasProperty('nevergreenVersion') ? nevergreenVersion : '0.6.0'
+    nevergreenVersion = hasProperty('nevergreenVersion') ? nevergreenVersion : '0.7.0'
     jarName = 'nevergreen-standalone.jar'
 }
 
