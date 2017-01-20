@@ -32,6 +32,6 @@ Nevergreen is also available on Dockerhub. You can access it [here](https://regi
 
 ## License
 
-Copyright © 2015 Build Canaries
+Copyright © 2017 Build Canaries
 
 Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
