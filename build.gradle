@@ -4,7 +4,7 @@ plugins {
 }
 
 ext {
-    nevergreenVersion = hasProperty('nevergreenVersion') ? nevergreenVersion : '0.9.0'
+    nevergreenVersion = hasProperty('nevergreenVersion') ? nevergreenVersion : '0.11.0'
     jarName = 'nevergreen-standalone.jar'
 }
 
