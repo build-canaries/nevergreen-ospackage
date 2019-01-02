@@ -8,12 +8,10 @@ ext {
     jarName = 'nevergreen-standalone.jar'
 }
 
-task downloadNevergreen << {
-    download {
-        src "https://github.com/build-canaries/nevergreen/releases/download/v${nevergreenVersion}/${jarName}"
-        dest "build/libs/${jarName}"
-        overwrite false
-    }
+task downloadFile(type: Download) {
+    src "https://github.com/build-canaries/nevergreen/releases/download/v${nevergreenVersion}/${jarName}"
+    dest "build/libs/${jarName}"
+    overwrite false
 }
 
 ospackage {
@@ -48,5 +46,5 @@ ospackage {
     }
 }
 
-buildRpm.dependsOn downloadNevergreen
-buildDeb.dependsOn downloadNevergreen
+buildRpm.dependsOn downloadFile
+buildDeb.dependsOn downloadFile
