@@ -23,7 +23,7 @@ already exists. This allows you to manually download or build your own jar local
 ### Overridable Properties
 
 - `nevergreenVersion`
-  The version of Nevergreen to download, e.g. 0.11.0
+  The version of Nevergreen to download, e.g. 3.0.0
 
 ## Docker Image
 
@@ -31,6 +31,6 @@ Nevergreen is also available on [Dockerhub](https://registry.hub.docker.com/u/bu
 
 ## License
 
-Copyright © 2017 Build Canaries
+Copyright © 2014 - 2018 Build Canaries
 
 Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
