@@ -1,6 +1,6 @@
 plugins {
     id "nebula.ospackage" version "6.1.1"
-    id "de.undercouch.download" version "3.1.2"
+    id "de.undercouch.download" version "3.4.3"
 }
 
 ext {
