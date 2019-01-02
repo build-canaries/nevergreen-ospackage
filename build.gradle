@@ -23,9 +23,9 @@ ospackage {
     arch = NOARCH
     os = LINUX
     summary = 'Nevergreen Build Monitor'
-    description = ' Nevergreen Build Monitor'
+    description = 'A build monitor with attitude. Continually deliver via fast clear feedback.'
     vendor = 'Build Canaries'
-    url = 'http://nevergreen.io/'
+    url = 'https://nevergreen.io/'
     user = 'root'
 
     postInstall = file('src/deploy/resources/rpm/postinst')
