@@ -1,3 +1,7 @@
+# This package is no longer maintained
+
+As everyone just seems to use Docker nowadays. 
+
 # Nevergreen OS Package
 
 ## What is Nevergreen?
